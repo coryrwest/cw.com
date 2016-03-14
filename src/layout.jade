@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = 'Cory Westropp'
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Dosis:400,500,600,700,300')
+      link(rel='stylesheet', href='styles/normalize.css')
+      link(rel='stylesheet', href='styles/main.css')
+  body.container
+    div.outer-wrap
+        div.dark-bg
+            div.fake-bg
+            div.color-bg
+                header.header
+                    div.header-wrap
+                        block header
+                        div.logo
+                            a(href=locals.url)
+                                img(src="img/logo.png")
+                        section.about
+                            include about.md
+                div#content
+                    div.nav-wrap
+                        ul
+                            li
+                                a(href="#") Home
+                                    span.icon-wrap
+                                        i.icon-home
+                            li
+                                a(href="#") Skills
+                                    span.icon-wrap
+                                        i.icon-user
+                            li
+                                a(href="#") Projects
+                                    span.icon-wrap
+                                        i.icon-briefcase
+                            li
+                                a(href="#") Contact
+                                    span.icon-wrap
+                                        i.icon-envelope-alt
+                    div.content-wrap
+                        block content
+                footer
+                    div.footer-wrap
+                        block footer
+                        
+                        section.copy
+                            p &copy; #{ new Date().getFullYear() } #{ locals.owner }
+                div.clearfix

@@ -1,0 +1,26 @@
+.clearfix {
+    zoom: 1;
+    
+    :before, :after {
+        content: '\0020';
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+   
+    :after {
+        clear: both;
+    }
+    
+}
+
+.row:before, .row:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}

@@ -1,0 +1,56 @@
+/* page header */
+
+.header {
+    width: 220px;
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    h1 {
+        font-size: 2.6em;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    a, a:hover {
+        text-decoration: none;
+        color: #171717;
+    }
+    
+    .author {
+        font-family: 'Merriweather', serif;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        text-rendering: auto;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .description {
+        font-size: 1.2em;
+        font-style: italic;
+        text-align: center;
+        margin-top: -0.3em;
+    }
+
+}
+
+.nav-wrap ul {
+    text-align: center;
+    list-style: none outside;
+    
+    li {
+        display: inline-block;
+    }
+    
+    li.active, li.hover {
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    background: url(../images/texture_bg.png) repeat #3c3837;
+    }
+}
+
