@@ -1,6 +1,11 @@
 ### Social
 
-Github Linkedin
+<div class="social-icons">
+<ul>
+<li><a href="https://github.com/coryrwest"><i class="icon-github"></i></a><li>
+<li><a href="https://www.linkedin.com/in/corywest"><i class="icon-linkedin"></i></a><li>
+</ul>
+</div>
 
 ### A Little About Me
 

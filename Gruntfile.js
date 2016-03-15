@@ -12,7 +12,8 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'build/styles/main.css': 'src/styles/main.scss',
-                    'build/styles/normalize.css': 'src/styles/normalize.scss'
+                    'build/styles/normalize.css': 'src/styles/normalize.scss',
+                    'build/styles/font-awesome.css': 'src/styles/font-awesome.scss'
                 }
             }
         },
@@ -36,7 +37,8 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    { expand: true, cwd: 'src/img', src: ['**'], dest: 'build/img/', filter: 'isFile' }
+                    { expand: true, cwd: 'src/img', src: ['**'], dest: 'build/img/', filter: 'isFile' },
+                    { expand: true, cwd: 'src/font', src: ['**'], dest: 'build/font/', filter: 'isFile' }
                 ]
             }
         }

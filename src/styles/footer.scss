@@ -1,7 +1,9 @@
 /* page footer */
 
 footer {
-    margin: 1em 0;
+    margin: 1em 0 0 0;
+    background: url(../img/texture_bg.png) repeat rgb(28, 28, 28);
+    padding: 10px;
     clear: both;
   
     .nav {
@@ -30,15 +32,23 @@ footer {
         column-gap: 2em;
     }
     
-    .copy {
-        text-align: center;
-        font-size: 0.7em;
-        font-style: italic;
-        margin-top: 1em;
-        color: #8e8e8e;
-        
-        a {
+    div.footer-wrap {
+        section.copy {
+            text-align: center;
+            font-size: 0.7em;
+            font-style: italic;
             color: #8e8e8e;
+            
+            a {
+                color: #8e8e8e;
+            }
+            
+            p {
+                margin: 0;
+                text-align: left;
+                color: #fff;
+                font-size: 14px;
+            }
         }
     }
 }

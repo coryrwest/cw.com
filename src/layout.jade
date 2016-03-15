@@ -11,44 +11,49 @@ html(lang='en')
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Dosis:400,500,600,700,300')
       link(rel='stylesheet', href='styles/normalize.css')
       link(rel='stylesheet', href='styles/main.css')
-  body.container
-    div.outer-wrap
-        div.dark-bg
-            div.fake-bg
-            div.color-bg
-                header.header
-                    div.header-wrap
-                        block header
-                        div.logo
-                            a(href=locals.url)
-                                img(src="img/logo.png")
-                        section.about
-                            include about.md
-                div#content
-                    div.nav-wrap
-                        ul
-                            li
-                                a(href="#") Home
-                                    span.icon-wrap
-                                        i.icon-home
-                            li
-                                a(href="#") Skills
-                                    span.icon-wrap
-                                        i.icon-user
-                            li
-                                a(href="#") Projects
-                                    span.icon-wrap
-                                        i.icon-briefcase
-                            li
-                                a(href="#") Contact
-                                    span.icon-wrap
-                                        i.icon-envelope-alt
-                    div.content-wrap
-                        block content
-                footer
-                    div.footer-wrap
-                        block footer
-                        
-                        section.copy
-                            p &copy; #{ new Date().getFullYear() } #{ locals.owner }
-                div.clearfix
+      link(rel='stylesheet', href='styles/font-awesome.css')
+  body
+    div.container
+        div.outer-wrap
+            div.dark-bg
+                div.fake-bg
+                div.color-bg
+                    header.header
+                        div.header-wrap
+                            div.logo
+                                a(href=locals.url)
+                                    img(src="img/logo.png")
+                            section.about
+                                include:markdown about.md
+                    div#content
+                        block nav
+                            -var nav = 'home'; //default
+                        div.nav-wrap
+                            ul(class="#{nav}")
+                                li.home
+                                    a(href="index.html")
+                                        span.icon-wrap
+                                            i.icon-home
+                                        span Home
+                                li.skills
+                                    a(href="skills.html")
+                                        span.icon-wrap
+                                            i.icon-user
+                                        span Skills
+                                li.projects
+                                    a(href="projects.html")
+                                        span.icon-wrap
+                                            i.icon-briefcase
+                                        span Projects
+                                li.contact
+                                    a(href="contact.html")
+                                        span.icon-wrap
+                                            i.icon-envelope-alt
+                                        span Contact
+                        div.content-wrap
+                            block content
+                    footer
+                        div.footer-wrap                        
+                            section.copy
+                                p Copyright &copy; #{ new Date().getFullYear() } Cory Westropp
+                    div.clearfix
