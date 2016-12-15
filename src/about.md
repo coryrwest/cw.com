@@ -2,8 +2,9 @@
 
 <div class="social-icons">
 <ul>
-<li><a href="https://github.com/coryrwest"><i class="icon-github"></i></a><li>
-<li><a href="https://www.linkedin.com/in/corywest"><i class="icon-linkedin"></i></a><li>
+<li><a href="http://corywestropp.com/develop/" alt="My Blog"><i class="icon-pencil"></i></a><li>
+<li><a href="https://github.com/coryrwest" alt="My Github"><i class="icon-github"></i></a><li>
+<li><a href="https://www.linkedin.com/in/corywest" alt="My Linkedin"><i class="icon-linkedin"></i></a><li>
 </ul>
 </div>
 

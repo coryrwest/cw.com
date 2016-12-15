@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 html, body {
     height: 100%;
     min-height: 100%;
@@ -61,21 +65,21 @@ body.article-detail > header {
   font-weight: 400;
   margin: 0.8em 0;
   font-size: 1.4em;
-}
-
-.article header h2 a {
-  text-decoration: none;
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .article header .date {
   text-align: center;
   font-size: 0.8em;
   margin-top: -0.7em;
-}
-
-.article header .date span {
-  background-color: #f8f8f8;
-  padding: 0 0.7em;
+  
+  span {
+    background-color: #f8f8f8;
+    padding: 0 0.7em;
+  }
 }
 
 .article.intro .content p {
@@ -120,7 +124,6 @@ p code {
   border-radius: 0.3em;
   position: relative;
   background: #fffff3;
-
   white-space: nowrap;
 }
 
@@ -152,60 +155,125 @@ code.lang-markdown .bullet {
   color: #bbb;
 }
 
+.pills {
+  p {
+    border-radius: 25px;
+    padding: 3px;
+    background: #666362 url(../img/texture_bg.png) repeat;
+    margin-bottom: 12px;
+    color: #e8e8e8;
+    
+    i {
+      width: 25px;
+      font-size: 16px;
+      display: inline-block;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      margin-right: 10px;
+      background: #3c3837;
+      border-radius: 100%;
+      color: #2e9891;
+    }
+  }
+}
+
+.intro p {
+    padding: 15px 10px;
+    display: table;
+    font-size: 20px;
+    margin-bottom: 7px;
+    background: #262524;
+    font-weight: 600;
+    line-height: normal;
+    
+    &.font48 {
+        font-size: 48px;
+    }
+    &.font24 {
+        font-size: 24px;
+    }
+    
+    span {
+      color: #2e9891;
+    }
+}
+
+.bracket {
+  h3 {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  
+  p {
+    margin-left: 20px;
+  }
+  
+  .brace {
+    font-weight: 300;
+    font-size: 45px;
+    color: #292929;
+    float: left;
+    margin-top: 5px;
+  }
+  
+  span {
+    color: #8d8d8d;
+    font-size: 14px;
+    display: block;
+  }
+}
+
+.projects h3 {
+  margin-top: 0;
+  
+  a {
+    color: #2e9891;
+    text-decoration: none;
+  }
+  
+  span {
+    font-size: 0.8em;
+    padding-left: 10px;
+  }
+}
+
 /* media queries */
 
 @media (min-width: 1600px) {
-  body { font-size: 26px; }
 }
 
-@media (max-width: 900px) {
-  body { font-size: 18px; }
+@media (max-width: 960px) {
+  .outer-wrap { width: 690px; }
+  #content { width: 430px; }
+  .content-wrap {
+    flex-direction: column;
+    
+    .intro, .skills, .experience {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 690px) {
+  body { margin: 0px 10px; }
+  .outer-wrap, .header, #content { width: 100%; }
+  .header { width: 100%; margin: 65px 0 0 0; }
+  .header-wrap { padding: 10px; }
+  section.about { text-align: center; }
+  .nav-wrap {
+    border: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+  #content { margin: 0; }
   .content-wrap {
-    width: auto;
-    padding: 0 1em;
-  }
-  .header {
-    margin: 1em 0;
-  }
-  .header h1 {
-    font-size: 1.4em;
-    margin-bottom: 0.6em;
-  }
-  .header .description {
-    font-size: 1em;
-  }
-  .article {
-    margin: 1em 0 2.5em;
-  }
-  .archive {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .archive * {
-    float: none !important;
-    line-height: 1.6 !important;
-    width: auto !important;
-    height: auto !important;
-    text-align: left !important;
-    border: 0 !important;
-    margin: 0 !important;
-  }
-  footer .nav {
-    margin: 1em 0;
-  }
-  footer .about {
-    padding: 0;
-    font-size: 0.9em;
-    padding-top: 1.6em;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -ms-column-count: 1;
-    column-count: 1;
-  }
-  footer .about p {
-    margin-bottom: 1em;
+    flex-direction: column;
+    border-left: none;
+    
+    .intro, .skills, .experience {
+      width: 100%;
+    }
   }
 }

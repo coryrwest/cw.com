@@ -24,7 +24,7 @@ html(lang='en')
                                 a(href=locals.url)
                                     img(src="img/logo.png")
                             section.about
-                                include:markdown about.md
+                                include:md about.md
                     div#content
                         block nav
                             -var nav = 'home'; //default
@@ -45,11 +45,6 @@ html(lang='en')
                                         span.icon-wrap
                                             i.icon-briefcase
                                         span Projects
-                                li.contact
-                                    a(href="contact.html")
-                                        span.icon-wrap
-                                            i.icon-envelope-alt
-                                        span Contact
                         div.content-wrap
                             block content
                     footer
