@@ -10,6 +10,6 @@
 
 ### A Little About Me
 
-I have lived in California most of my life and love it. I love computers and have been tinkering with them my whole life. I am a jack of all trades when it comes to computers.
+Computers have always called to me, I have been tinkering with them my whole life. I have always been facinated with technology and how it is leveraged to make life easier and better.
 
-I am conscious of the environment and our impact on it. I love building programs that save me time and energy or have a meaningful impact on someone else's life.
+Building programs that save time and energy or have a meaningful impact on someone else's life are what I strive to create.
