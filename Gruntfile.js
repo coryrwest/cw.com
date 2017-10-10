@@ -41,6 +41,34 @@ module.exports = function (grunt) {
                     { expand: true, cwd: 'src/font', src: ['**'], dest: 'docs/font/', filter: 'isFile' }
                 ]
             }
+        },
+        postcss: {
+            options: {
+              map: true, // inline sourcemaps
+              processors: [
+                require('pixrem')(), // add fallbacks for rem units
+                require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                require('cssnano')() // minify the result
+              ]
+            },
+            dist: {
+              src: 'docs/styles/*.css'
+            }
+        },
+        uncss: {
+            dist: {
+                options: {
+                    report: 'min'
+                },
+                files: {
+                    'docs/styles/compiled.min.css': ['docs/*.html']
+                }
+            }
+        },
+        processhtml: {
+          dist: {
+            files: { 'docs/index.html': ['docs/index.html'] }
+          }
         }
     });
 
@@ -48,6 +76,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-processhtml');
 
-    grunt.registerTask('default', ['jshint', 'sass', 'jade', 'copy']);
+    grunt.registerTask('default', ['jshint', 'sass', 'jade', 'copy', 'postcss', 'uncss', 'processhtml']);
 };
