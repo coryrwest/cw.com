@@ -8,12 +8,12 @@
 </ul>
 </div>
 
-### A Little About Me
+### What I am looking for now
 
-I've been interested in all things hardware and software my entire life. I believe that software exists to make life easier for humans.
-I strive to write software that does just that; while making sure that it is well-written, performant, and readable.
+My deepest motivation is to build software that save time and energy or has a meaningful impact on someone else's life.
 
-I have a knack for picking thing up quickly and a need to always be learning. Which has helped me accumulate a large base of knowledge 
-across the software stack. Allowing me to function as an effective and efficient full stack developer.
+I am currently most interested in recent work around LLM's, massaging insights out of big data, or any company that is working to solve the coming climate crisis.
 
-Building programs that save time and energy or have a meaningful impact on someone else's life are what I hope to create.
+If you found your self here and meet one those criteria, I really want to talk to you.
+
+

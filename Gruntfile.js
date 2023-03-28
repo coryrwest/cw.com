@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         jshint: {
             all: ['src/js']
         },
-        sass: {
+        'dart-sass': {
             options: {
                 sourceMap: true
             },
@@ -73,12 +73,12 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-dart-sass');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-processhtml');
 
-    grunt.registerTask('default', ['jshint', 'sass', 'jade', 'copy', 'postcss', 'uncss', 'processhtml']);
+    grunt.registerTask('default', ['jshint', 'dart-sass', 'jade', 'copy', 'postcss', 'uncss', 'processhtml']);
 };

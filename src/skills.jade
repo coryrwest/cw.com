@@ -4,44 +4,42 @@ block nav
   -var nav = 'skills';
 
 block content
-    div.skills
+    div.skills.columns
         h3.bar My Skills
         p Ranked per category in order of experience
         div
             p General
                 ul
-                    li Software Design
+                    li Software and API Design
                     li Information Technology
                     li Web Design
                     li Graphic Design
                     li Network Engineering
             p Dev Ops
                 ul
-                    li Git
-                    li LXC
+                    li Git (GitHub, BitBucket)
                     li Docker
-                    li CI pipelines
-                    li TeamCity/Jenkins
+                    li LXC
+                    li CI/CD pipelines (Jenkins, TeamCity, BitBucket Pipelines)
             p PaaS
                 ul
                     li Azure
-                    li AWS
                     li GCP
+                    li AWS
             p Web
                 ul
                     li Javascript
+                    li VueJS
                     li jQuery
                     li ReactJS
                     li AngularJS
-                    li VueJS
             p Server
                 ul
-                    li C# and .NET
-                    li SQL Server
+                    li C# and .NET Core
+                    li MS SQL Server / Postgres
+                    li Python
                     li Windows Server
                     li Linux Administration
-                    li Python
-                    li Postgresql
                     li MySQL
                     li Java
         h3.bar My Background
@@ -53,8 +51,17 @@ block content
             | that software exists to help people. It is supposed to make life easier, 
             | save time, help us keep our sanity. In a world of ever increasing complexity 
             | and busy-ness I strive to create things that help people live better, easier lives.
-    div.experience
+    div.experience.columns
         h3.bar My Experience
+        div.bracket
+            div.brace {
+            h3 Senior Software Engineer
+                span Bombora, Inc. From (2020-2023)
+            p Responsible for mentoring junior engineers as they develop Bombora's client facing applications
+            p Lead architect and developer on a new customer frontend application with a focus on performance, security, accessibility, and usability
+            p Languages: Vue.js · Authentication Systems · Web Content Accessibility Guidelines (WCAG) · C# · SQL
+            p Technologies: ASP.NET Core MVC/WebAPI, SQL Server/Postgres, VueJS, GCP
+
         div.bracket
             div.brace {
             h3 Senior Software Engineer

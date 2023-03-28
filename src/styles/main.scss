@@ -163,7 +163,8 @@ code.lang-markdown {
   }
 }
 
-.intro p {
+.intro {
+  p {
     padding: 15px 10px;
     display: table;
     font-size: 20px;
@@ -182,6 +183,7 @@ code.lang-markdown {
     span {
       color: $sec-bg-color;
     }
+  }
 }
 
 .bracket {

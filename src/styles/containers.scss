@@ -67,8 +67,12 @@
     border-left: 2px solid $sec-bg-color;
     padding: 20px 0 20px 15px;
     
-    .intro, .contact, .skills, .experience {
-        width: 50%;
+    .columns {
+        flex: 1;
+    }
+
+    .columns:not(:first-of-type) {
+        padding-left: 1rem;
     }
 }
 
